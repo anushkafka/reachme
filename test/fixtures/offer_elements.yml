@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  element_type: MyString
+  element_position: 1
+  offer_id: 1
+  response_required: false
+  active: false
+  file_name: MyString
+  file_content_type: MyString
+  file_size: 1
+  file_updated_at: 2019-03-01 09:32:07
+  deleted_at: 2019-03-01 09:32:07
+
+two:
+  element_type: MyString
+  element_position: 1
+  offer_id: 1
+  response_required: false
+  active: false
+  file_name: MyString
+  file_content_type: MyString
+  file_size: 1
+  file_updated_at: 2019-03-01 09:32:07
+  deleted_at: 2019-03-01 09:32:07
