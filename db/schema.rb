@@ -10,10 +10,44 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_24_040335) do
+ActiveRecord::Schema.define(version: 2019_03_01_040632) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "offer_element_responses", force: :cascade do |t|
+    t.integer "offer_element_id"
+    t.string "file_name"
+    t.string "content_type"
+    t.integer "file_size"
+    t.datetime "file_updated_at"
+    t.datetime "deleted_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "offer_elements", force: :cascade do |t|
+    t.string "element_type"
+    t.integer "element_position"
+    t.integer "offer_id"
+    t.boolean "response_required"
+    t.boolean "active"
+    t.string "file_name"
+    t.string "file_content_type"
+    t.integer "file_size"
+    t.datetime "file_updated_at"
+    t.datetime "deleted_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "offers", force: :cascade do |t|
+    t.string "name"
+    t.string "email"
+    t.string "type"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
